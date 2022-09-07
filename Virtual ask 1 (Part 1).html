@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width">
+		<meta charset="UTF-8">
+		<title>Virtual ask 1 (Part 1)</title>
+		<link href="https://fonts.googleapis.com/css?family=Tangerine&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&display=swap" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+		<style>
+
+		</style>
+	</head>
+	<body class="grid-container">
+		<header class="header">
+			Virtual ask 1 (Part 1)
+		</header>
+		<aside class="aside">
+			<a href="https://el.wikipedia.org/wiki/%CE%98%CE%B5%CF%89%CF%81%CE%AF%CE%B1_%CF%80%CE%BB%CE%B7%CF%81%CE%BF%CF%86%CE%BF%CF%81%CE%AF%CE%B1%CF%82" rel="noreferrer noopener" target="_blank">Θεωρία πληροφορίας</a><br>
+		</aside>
+		<main class="main">
+				<h2>Υπολογισμοί για το <span>SNR</span> σε <span>dB</span> και σαν καθαρό αριθμό για εύρος τιμών της 
+				φασματικής απόδοσης <span>C/B</span> σε <span>bps per Hz</span></h2>
+				<p class="instructions">
+				Συμπήρωσε όλα τα πεδία με τα αντίστοιχα μεγέθη, δίνοντας εύρος για <span>C/B</span> (σε <span>bps per Hz</span>), ώστε με βάση αυτό
+				να υπολογιστεί η τιμή του SNR στον δέκτη σε <span>dB</span> και σε καθαρό αριθμό, σύμφωνα με τη θεωρία 
+				πληροφοριών κατά Shannon <span class="type">C = B*log<sub>2</sub>(1+SNR)</span>, σε κάθε περίπτωση.<br>
+				Ενδεικτικά υπάρχουν κάποιες προσυμπληρωμένες τιμές, οι οποίες μπορούν να τροποποιηθούν.
+				</p>
+				<br>
+				<form>
+				<label><em>Α</em>ρχική τιμή για την φασματική απόδοση του καναλιού επικοινωνίας μας <span>(C/B)<sub>initial</sub></span> σε <span>bpspHz</span> : <input id="cbinitial" type="text"></label><br>
+				<label><em>Τ</em>ελική τιμή για την φασματική απόδοση <span>(C/B)<sub>final</sub></span> σε <span>bpspHz</span> : <input id="cbfinal" type="text"></label><br>
+				<label><em>Β</em>ήμα για τις αλλαγές της φασματικής απόδοσης : <input class="selected" id="step" type="text"></label><br>
+				</form>
+				<br>
+				<p class="instructions">
+				Πάτησε κάποιο από τα επόμενα κουμπιά για να πάρεις τα αποτελέσματα τόσο σε πίνακα όσο και σε μορφή διαγράμματος.
+				</p>
+				<br>
+				<button id="deleteResults">Καθάρισε τα αποτελέσματα</button>
+				<button id="deleteFields">Επανάφερε τις ενδεικτικές τιμές στα πεδία</button>
+				<br><br>
+				<p class="instructions">C/B - SNR(KA)</p>
+				<p class="instructions">Πάτησε το κουμπί</p>
+				<button id="CB_SNR_KA">C/B - SNR(KA)</button><br><br>
+				<div class="table_div together"></div>
+				<div class="chart_div together"></div><br><br>
+				<p class="instructions">C/B - SNR(dB)</p>
+				<p class="instructions">Πάτησε το κουμπί</p>
+				<button id="CB_SNR_dB">C/B - SNR(dB)</button><br><br>
+				<div class="table_div together"></div>
+				<div class="chart_div together"></div><br><br>
+				<p class="instructions">SNR(KA) - SNR(dB)</p>
+				<p class="instructions">Πάτησε το κουμπί</p>
+				<button id="SNR_dB_SNR_KA">SNR(KA) - SNR(dB)</button><br><br>
+				<div class="table_div together"></div>
+				<div class="chart_div together"></div><br><br>
+			
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="src.js"></script>
+
+		</main>
+		<footer class="footer">
+			<span>Συστήματα επικοινωνιών 2020</span>
+		</footer>
+	</body>
+</html>
